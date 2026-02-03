@@ -27,7 +27,7 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-5. Quick shell examples for creating/querying `Book` objects (use the current `Book` model fields: `title`, `author`, `published_date`, `isbn`):
+5. Quick shell examples for creating/querying `Book` objects (use the current `Book` model fields: `title`, `author`, `publication_year`):
 
 ```bash
 python manage.py shell
@@ -37,8 +37,7 @@ Inside the Django shell:
 
 ```py
 from bookshelf.models import Book
-from datetime import date
-book = Book.objects.create(title="1984", author="George Orwell", published_date=date(1949,6,8), isbn="9780451524935")
+book = Book.objects.create(title="1984", author="George Orwell", publication_year=1949)
 Book.objects.all()
 book.title = "Nineteen Eighty-Four"
 book.save()
@@ -46,5 +45,6 @@ book.delete()
 ```
 
 Notes:
+
 - If you change the model (add/remove fields) remember to run `makemigrations` and `migrate` again.
-- If you need a `publication_year` integer field instead of `published_date`, update `bookshelf/models.py` and create a migration.
+  -- If you change the model (add/remove fields) remember to run `makemigrations` and `migrate` again.
