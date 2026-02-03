@@ -23,8 +23,9 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("title", models.CharField(max_length=200)),
-                ("author", models.CharField(max_length=100)),
-                ("publication_year", models.IntegerField(blank=True, null=True)),
+                ("author", models.CharField(blank=True, max_length=200)),
+                ("published_date", models.DateField(blank=True, null=True)),
+                ("isbn", models.CharField(blank=True, max_length=20)),
             ],
             options={
                 "ordering": ["title"],
