@@ -16,10 +16,12 @@ def list_books(request):
     books = Book.objects.all()
     return render(request, 'relationship_app/list_books.html', {'books': books})
 
+
 class LibraryDetailView(DetailView):
     model = Library
     template_name = 'relationship_app/library_detail.html'
     context_object_name = 'library'
+
 
 def register(request):
     if request.method == 'POST':
@@ -32,25 +34,30 @@ def register(request):
         form = UserCreationForm()
     return render(request, 'relationship_app/register.html', {'form': form})
 
+
 @login_required
 @user_passes_test(lambda u: u.userprofile.role == 'Admin')
 def admin_view(request):
     return render(request, 'relationship_app/admin_view.html')
+
 
 @login_required
 @user_passes_test(lambda u: u.userprofile.role == 'Librarian')
 def librarian_view(request):
     return render(request, 'relationship_app/librarian_view.html')
 
+
 @login_required
 @user_passes_test(lambda u: u.userprofile.role == 'Member')
 def member_view(request):
     return render(request, 'relationship_app/member_view.html')
 
+
 class BookForm(ModelForm):
     class Meta:
         model = Book
         fields = ['title', 'author', 'publication_year']
+
 
 @permission_required('relationship_app.can_add_book')
 def add_book(request):
@@ -63,6 +70,7 @@ def add_book(request):
         form = BookForm()
     return render(request, 'relationship_app/book_form.html', {'form': form, 'action': 'Add'})
 
+
 @permission_required('relationship_app.can_change_book')
 def edit_book(request, pk):
     book = get_object_or_404(Book, pk=pk)
@@ -74,6 +82,7 @@ def edit_book(request, pk):
     else:
         form = BookForm(instance=book)
     return render(request, 'relationship_app/book_form.html', {'form': form, 'action': 'Edit'})
+
 
 @permission_required('relationship_app.can_delete_book')
 def delete_book(request, pk):
