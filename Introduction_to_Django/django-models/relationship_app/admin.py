@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Author, Book, Library, Librarian
+from .models import Author, Book, Library, Librarian, UserProfile
 
 
 @admin.register(Author)
@@ -24,3 +24,8 @@ class LibraryAdmin(admin.ModelAdmin):
 @admin.register(Librarian)
 class LibrarianAdmin(admin.ModelAdmin):
 	list_display = ('id', 'name', 'library')
+
+
+@admin.register(UserProfile)
+class UserProfileAdmin(admin.ModelAdmin):
+	list_display = ('user', 'role')

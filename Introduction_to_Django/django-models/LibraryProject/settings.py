@@ -73,6 +73,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "LibraryProject.wsgi.application"
 
+LOGIN_REDIRECT_URL = '/books/'
+
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
