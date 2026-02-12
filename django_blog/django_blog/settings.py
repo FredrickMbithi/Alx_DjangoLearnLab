@@ -11,9 +11,15 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Generic environment-driven settings
+# `USER` and `PORT` are read from the environment for optional use elsewhere
+USER = os.environ.get("USER", "")
+PORT = os.environ.get("PORT", "")
 
 
 # Quick-start development settings - unsuitable for production
