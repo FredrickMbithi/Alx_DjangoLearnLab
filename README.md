@@ -2,7 +2,7 @@
 
 A collection of Django projects and exercises created as part of the ALX Software Engineering program, demonstrating progressive learning from Django fundamentals to advanced web application development.
 
-## 📚 Overview
+## Overview
 
 This repository contains three Django projects showcasing different aspects of web development with Django framework:
 
@@ -27,7 +27,7 @@ Alx_DjangoLearnLab/
     └── manage.py               # Django management script
 ```
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 ### Module 1: Introduction to Django
 - Setting up Django development environment
@@ -49,7 +49,7 @@ Alx_DjangoLearnLab/
 - Form handling and validation
 - Static files management
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -96,7 +96,7 @@ python manage.py runserver
 
 Access blog: http://127.0.0.1:8000
 
-## 📝 Project Details
+## Project Details
 
 ### Django Models (Library Project)
 
@@ -148,7 +148,7 @@ book = Book.objects.get(id=1)
 - `/post/new/` — Create new post
 - `/admin/` — Admin interface
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Django 4.x** — Web framework
 - **SQLite** — Default database (dev)
@@ -156,7 +156,7 @@ book = Book.objects.get(id=1)
 - **Django Template Language** — Frontend templating
 - **Django Admin** — Built-in admin interface
 
-## 📖 Learning Resources
+## Learning Resources
 
 **Django Documentation:** https://docs.djangoproject.com/
 
@@ -179,7 +179,7 @@ book = Book.objects.get(id=1)
 6. **Create Templates** → Design frontend
 7. **Test** → Verify functionality
 
-## 📊 Database Schema Examples
+## Database Schema Examples
 
 ### Book Model (django-models)
 
@@ -204,7 +204,7 @@ class Post(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 ```
 
-## 🎓 ALX Program Context
+## ALX Program Context
 
 This repository is part of the **ALX Software Engineering Program**, a comprehensive full-stack development curriculum. These projects demonstrate:
 
@@ -214,7 +214,7 @@ This repository is part of the **ALX Software Engineering Program**, a comprehen
 - MVC/MTV architectural patterns
 - Database design and ORM usage
 
-## 🧪 Testing
+## Testing
 
 Each project includes database files (`db.sqlite3`) for demonstration purposes. In production:
 
@@ -227,7 +227,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-## 📝 Notes
+## Notes
 
 - Database files (`db.sqlite3`) are included for educational purposes
 - `.pyc` files and `__pycache__` directories may be present
@@ -244,16 +244,16 @@ This is an educational repository. For learning purposes:
 4. Push to your fork
 5. Submit a pull request
 
-## 📄 License
+## License
 
 Educational project - MIT License
 
-## 👤 Author
+## Author
 
 **Fredrick Mbithi**  
 ALX Software Engineering Student
 
-## 🔗 Related Projects
+## Related Projects
 
 - [Advanced Library Management System](https://github.com/FredrickMbithi/Advanced-Library-Management-System) — Production-grade library system
 - [Event Management API](https://github.com/FredrickMbithi/event_management_api) — Django REST Framework API
